@@ -3,6 +3,24 @@ body {
     background-color: #ccc;
 }
 
-.bg-primary {
-    background-color: black;
+#hero {
+    height: 45vh;
+}
+
+.card {
+    color: black;
+}
+
+#our-story {
+   
+}
+
+.carousel-caption {
+    background-color: rgba(24, 24, 24, 0.808);
+    color: rgb(255, 255, 255);
+}
+
+
+footer {
+    border-top: 2px solid black;
 }
