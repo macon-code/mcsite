@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{% static 'home_site/images/favicon.ico' %}"/>
+    <title>Macon Code</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home_site/css/styles.css' %}">
+</head>
+<body>
+    <h1>Macon Code</h1>
+    <p>Welcome home!</p>
+
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>We are Macon Code</h1> 
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+      </div>
+        
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>See our projects</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+           
+          </div>
+          <div class="col-sm-4">
+            <h3>Submit an idea</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            
+          </div>
+          <div class="col-sm-4">
+            <h3>Learn about us</h3>        
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+           </div>
+
+        </div>
+      </div>
+</body>
+</html>
