@@ -55,12 +55,20 @@ $ python manage.py runserver
 
 ## Contributing
 1. Fork the repository
-2. Create a new branch: git checkout -b feature_name
-3. Make your changes and commit them: git commit -m 
-4. 'Description of changes'
-5. Push the changes to your branch: git push origin 
-6. feature_name
-7. Submit a pull request
+2. Create a new branch: 
+   ```
+   $ git checkout -b feature_name
+   ```
+3. Make your changes and commit them: 
+   ```
+   $ git commit -m "Description of changes"
+   ```
+4. Push the changes to your branch: 
+   ```
+   $ git push -u origin HEAD
+   ```
+5. Submit a pull request
+
 When contributing, only include the project files - do not include the virtual environment. 
 
 ## License
