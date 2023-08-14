@@ -1,5 +1,5 @@
 """
-URL configuration for Macon_Code project.
+URL configuration for project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -18,6 +18,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home_site/', include('home_site.urls')),
+    path("admin/", admin.site.urls),
+    path("", include("website.urls")),
 ]
