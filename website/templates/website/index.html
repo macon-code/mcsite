@@ -22,6 +22,15 @@
   <script src="{% static  'js/main.js' %}"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    #hero-overlay-img {
+      position: relative;
+      top: -120px;
+      background: linear-gradient(to top, #fd04c1ba, #fa07bacc), url(https://picsum.photos/id/82/1920/2440) top center;
+      background-size: cover;
+    }
+  </style>
 </head>
 <body>  
  
@@ -122,7 +131,7 @@
       </nav>  
 
         
-      <div class=" hero max-w-full   bg-cover  lg:bg-center bg-[url('https://picsum.photos/id/82/1920/2440')]  ">
+      <div id="hero-overlay-img" class=" hero max-w-full   bg-cover  lg:bg-center bg-[url('https://picsum.photos/id/82/1920/2440')]  ">
       
      
 
