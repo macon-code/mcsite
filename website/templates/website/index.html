@@ -191,10 +191,10 @@
                         <!-- <h3 class="text-2xl font-bold text-[#E1CE7A]">See our projects</h3> -->
                         <span class="inline-block mb-6 text-2xl md:text-4xl font-bold font-heading">See our projects </span>
                        <p class="text-lg text-center leading-relaxed mb-6 text-gray-600">
-                          Read about our latest project!  
+                          Read about our latest projects!
                          </p>
                          <a class="block w-full px-5 py-3 text-sm text-center bg-[#df1683] hover:bg-[#b34b84] text-white font-semibold border border-[#df1683] hover:border-[#b34b84] rounded-lg transition duration-200"
-                         href="#">Read about our latest project!</a>
+                         href="{% url 'projects' %}">Read about our latest projects!</a>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
@@ -218,7 +218,7 @@
                             We are looking for projects to help Macon. Share your idea. 
                            </p>
                         <a class="block w-full px-5 py-3 text-sm text-center bg-[#df1683] hover:bg-[#b34b84] text-white font-semibold border border-[#df1683] hover:border-[#b34b84] rounded-lg transition duration-200"
-                        href="#">Action</a>
+                        href="{% url 'suggestionForm' %}">Suggest a Project</a>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/3 px-4">
@@ -242,7 +242,7 @@
                             Learn about the group and our goals. 
                            </p>
                         <a class="block w-full px-5 py-3 text-sm text-center bg-[#df1683] hover:bg-[#b34b84] text-white font-semibold border border-[#df1683] hover:border-[#b34b84] rounded-lg transition duration-200"
-                            href="#">Action</a>
+                            href="{% url 'aboutUs' %}">About Us</a>
                     </div>
                 </div>
             </div>
