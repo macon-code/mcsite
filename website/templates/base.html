@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Macon Code{% endblock %}</title>
+
+   <style>
+      [x-cloak] {
+          display: none !important;
+      }
+
+      html {
+          scroll-behavior: smooth;
+      }
+  </style> 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>  
+  <script src="{% static  'js/main.js' %}"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    #hero-overlay-img {
+      position: relative;
+      top: -120px;
+      background: linear-gradient(to top, #fd04c1ba, #fa07bacc), url(https://picsum.photos/id/82/1920/2440) top center;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>  
+ 
+
+
+      
+  
+    <nav x-data="{ atTop: false }" class=" z-50 top-0  fixed  w-full  transition duration-500 ease-in-out" :class="{ 'shadow-lg': atTop, 'bg-transparent text-white': !atTop, 'bg-white text-black': atTop }" @scroll.window="atTop = (window.pageYOffset < 50) ? false: true">
+        <div class="antialiased  dark-mode:bg-gray-900 ">
+        <div class="w-full   dark-mode:text-gray-200">
+            <div x-data="{ open: false }" class="flex flex-col  p-4 mt-0 mx-9  md:items-center md:justify-between md:flex-row  md:px-6 lg:px-8">
+            <div class="flex flex-row  items-center justify-between  ">
+              <a href="#" class="text-xl font-semibold tracking-widest  uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline inline-flex items-center  ">
+                <span class=" fill-white text-2xl pr-2 "> < </span>
+                <svg class="  h-7 " :class="{ 'stroke-white': atTop,  'fill-white' : atTop,  'fill-black': !atTop, 'stroke-black':!atTop }" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 24c-1.147 0-2.22-.455-3.023-1.281-.378-.39-.674-.845-.876-1.335-1.547.654-3.393.294-4.587-.899-.806-.806-1.243-1.88-1.231-3.021.006-.551.115-1.083.319-1.574-1.543-.626-2.602-2.114-2.602-3.89 0-1.762 1.077-3.274 2.601-3.9-.644-1.532-.342-3.33.913-4.585 1.181-1.18 3.078-1.542 4.591-.908.203-.488.498-.941.875-1.328.801-.825 1.874-1.279 3.02-1.279 1.778 0 3.266 1.061 3.891 2.606 1.528-.634 3.404-.281 4.594.909 1.259 1.257 1.56 3.035.904 4.581 1.53.624 2.611 2.139 2.611 3.904 0 1.778-1.062 3.267-2.606 3.892.65 1.534.348 3.336-.909 4.593-1.183 1.182-3.083 1.541-4.593.908-.625 1.544-2.113 2.607-3.892 2.607zm-5.26-9.792l-1.793 1.722c-.864.83-.902 2.256-.018 3.141.839.84 2.234.852 3.17-.048l1.661-1.692.031 2.443c.001 1.141.927 2.226 2.209 2.226 1.085 0 2.208-.844 2.208-2.255v-2.414l1.707 1.707c.872.869 2.327.862 3.156.033.768-.767.965-2.158-.033-3.156l-1.706-1.707h2.413c1.411 0 2.255-1.123 2.255-2.208 0-1.198-.992-2.21-2.167-2.21h-2.347l1.537-1.69c1.035-1.079.808-2.412.048-3.171-.839-.838-2.335-.821-3.142.019l-1.721 1.793v-2.486c0-1.411-1.123-2.255-2.208-2.255-1.281 0-2.241 1.081-2.209 2.227l-.008 2.514-1.698-1.779c-.87-.869-2.327-.861-3.157-.033-.767.767-.964 2.158.034 3.156l1.779 1.778-2.514-.072h-.002c-1.233 0-2.225 1.012-2.225 2.209 0 1.085.843 2.208 2.255 2.208h2.485zm5.26-5.208c1.656 0 3 1.344 3 3s-1.344 3-3 3-3-1.344-3-3 1.344-3 3-3z"/></svg> 
+                <span class=" text-2xl lg:pl-2"> /> </span>
+                <span class="lg:pl-6"> Macon Code </span></a>
+              <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                  <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                  <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </div>
+
+            <nav :class="{'flex': open, 'hidden': !open}" class=" z-10  flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+              <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Donate</a>
+              <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#about">Volunteer</a>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+      </nav>  
+
+    
+      <div id="hero-overlay-img" class=" hero max-w-full   bg-cover  lg:bg-center bg-[url('https://picsum.photos/id/82/1920/2440')]">
+        <div class="hero-overlay bg-pink-700 bg-opacity-60"></div>
+        <div class="mx-auto  pt-32 my-28 pb-6    lg:ml-16 md:ml-10  lg:max-w-7xl ">
+          <header class=" flex flex-col  pb-36" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h1 class="max-w-xl uppercase mb-4 text-xl leading-tight md:text-4xl md:leading-tight lg:text-6xl lg:leading-tight font-bold text-white">
+                Help us design for Macon!
+            </h1>
+            <p class="text-xl text-white font-normal leading-relaxed lg:leading-normal lg:text-2xl tracking-wide mt-6 max-w-4xl">
+                We are Macon Code, a non-profit organization working on solutions for community problems through the thoughtful use of technology. We beleive in the possibilities of our community, and we strive to develop resources that make Macon better for everyone.
+            </p>
+            <a href="#main" class="uppercase py-2 px-8 lg:py-2 lg:px-5 text-sm lg:text-sm tracking-widest bg-pink-300 hover:bg-indigo-600 text-black w-fit mt-10">
+              bibh felis →
+            </a>
+          </header>
+        </div>
+      </div>
+
+      <main class="" ></main>
+
+     
+      
+      </main>
+
+    
+
+<footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+  <div class="grid grid-flow-col gap-4">
+    <a class="link link-hover">About us</a> 
+    <a class="link link-hover">Contact</a> 
+    <a class="link link-hover">Jobs</a> 
+    <a class="link link-hover">Press kit</a>
+  </div> 
+  <div>
+    <div class="grid grid-flow-col gap-4">
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+    </div>
+  </div> 
+  <div>
+    <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+  </div>
+</footer>
+
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({once: true});
+  </script>
+</body>
+</html>
