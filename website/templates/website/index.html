@@ -33,83 +33,18 @@
   </style>
 </head>
 <body>  
- 
-
-
-      <main
-  
-      class=""
-      x-data="{ atTop: false }"
-      >
-  
-<!-- <div 
-      :class="{ 'scrolled': !view.atTopOfPage }"
-      class="navbar  z-50 top-0  fixed   w-full">
-        <div class=" ">
-
-          <a class="btn btn-ghost normal-case text-xl ml-32">daisyUI</a>
-          <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-            </label>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
-            </ul>
-          </div>
-         
-        </div>
-        <div class="navbar-end hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li tabindex="0">
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
-        <div class="navbar-end">
-          <a class="btn">Button</a>
-        </div>
-      </div>  -->
-       <nav 
-
-       class=" z-50 top-0  fixed  w-full  transition duration-500 ease-in-out"
-      
-       :class="{ 'shadow-lg': atTop, 'bg-transparent text-white': !atTop, 'bg-white text-black': atTop }"
-       @scroll.window="atTop = (window.pageYOffset < 50) ? false: true"
-       
-      
-   
-      
-      >
+       <nav  x-data="{ atTop: false }" class=" z-50 top-0  fixed  w-full  transition duration-500 ease-in-out" :class="{ 'shadow-lg': atTop, 'bg-transparent text-white': !atTop, 'bg-white text-black': atTop }"
+       @scroll.window="atTop = (window.pageYOffset < 50) ? false: true">
         <div class="antialiased  dark-mode:bg-gray-900 ">
-        <div class="w-full   dark-mode:text-gray-200 "
-       
-        >
+        <div class="w-full   dark-mode:text-gray-200 ">
           <div x-data="{ open: false }" class="flex flex-col  p-4 mt-0 mx-9  md:items-center md:justify-between md:flex-row  md:px-6 lg:px-8">
             <div class="flex flex-row  items-center justify-between  ">
-              <a href="#" class="text-xl font-semibold tracking-widest  uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline inline-flex items-center  ">
-               
+              <a href="#" class="text-xl font-semibold tracking-widest  uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline inline-flex items-center">
                 <span class=" fill-white text-2xl pr-2 "> < </span>
                 <svg class="  h-7 "
-                :class="{ 'stroke-white': atTop,  'fill-white' : atTop,  'fill-black': !atTop, 'stroke-black':!atTop }"
-                width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 24c-1.147 0-2.22-.455-3.023-1.281-.378-.39-.674-.845-.876-1.335-1.547.654-3.393.294-4.587-.899-.806-.806-1.243-1.88-1.231-3.021.006-.551.115-1.083.319-1.574-1.543-.626-2.602-2.114-2.602-3.89 0-1.762 1.077-3.274 2.601-3.9-.644-1.532-.342-3.33.913-4.585 1.181-1.18 3.078-1.542 4.591-.908.203-.488.498-.941.875-1.328.801-.825 1.874-1.279 3.02-1.279 1.778 0 3.266 1.061 3.891 2.606 1.528-.634 3.404-.281 4.594.909 1.259 1.257 1.56 3.035.904 4.581 1.53.624 2.611 2.139 2.611 3.904 0 1.778-1.062 3.267-2.606 3.892.65 1.534.348 3.336-.909 4.593-1.183 1.182-3.083 1.541-4.593.908-.625 1.544-2.113 2.607-3.892 2.607zm-5.26-9.792l-1.793 1.722c-.864.83-.902 2.256-.018 3.141.839.84 2.234.852 3.17-.048l1.661-1.692.031 2.443c.001 1.141.927 2.226 2.209 2.226 1.085 0 2.208-.844 2.208-2.255v-2.414l1.707 1.707c.872.869 2.327.862 3.156.033.768-.767.965-2.158-.033-3.156l-1.706-1.707h2.413c1.411 0 2.255-1.123 2.255-2.208 0-1.198-.992-2.21-2.167-2.21h-2.347l1.537-1.69c1.035-1.079.808-2.412.048-3.171-.839-.838-2.335-.821-3.142.019l-1.721 1.793v-2.486c0-1.411-1.123-2.255-2.208-2.255-1.281 0-2.241 1.081-2.209 2.227l-.008 2.514-1.698-1.779c-.87-.869-2.327-.861-3.157-.033-.767.767-.964 2.158.034 3.156l1.779 1.778-2.514-.072h-.002c-1.233 0-2.225 1.012-2.225 2.209 0 1.085.843 2.208 2.255 2.208h2.485zm5.26-5.208c1.656 0 3 1.344 3 3s-1.344 3-3 3-3-1.344-3-3 1.344-3 3-3z"/></svg> <span class=" text-2xl lg:pl-2"> /> </span>
-    
-          
+                :class="{ 'stroke-white': atTop,  'fill-white' : atTop,  'fill-black': !atTop, 'stroke-black':!atTop}"
+                width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 24c-1.147 0-2.22-.455-3.023-1.281-.378-.39-.674-.845-.876-1.335-1.547.654-3.393.294-4.587-.899-.806-.806-1.243-1.88-1.231-3.021.006-.551.115-1.083.319-1.574-1.543-.626-2.602-2.114-2.602-3.89 0-1.762 1.077-3.274 2.601-3.9-.644-1.532-.342-3.33.913-4.585 1.181-1.18 3.078-1.542 4.591-.908.203-.488.498-.941.875-1.328.801-.825 1.874-1.279 3.02-1.279 1.778 0 3.266 1.061 3.891 2.606 1.528-.634 3.404-.281 4.594.909 1.259 1.257 1.56 3.035.904 4.581 1.53.624 2.611 2.139 2.611 3.904 0 1.778-1.062 3.267-2.606 3.892.65 1.534.348 3.336-.909 4.593-1.183 1.182-3.083 1.541-4.593.908-.625 1.544-2.113 2.607-3.892 2.607zm-5.26-9.792l-1.793 1.722c-.864.83-.902 2.256-.018 3.141.839.84 2.234.852 3.17-.048l1.661-1.692.031 2.443c.001 1.141.927 2.226 2.209 2.226 1.085 0 2.208-.844 2.208-2.255v-2.414l1.707 1.707c.872.869 2.327.862 3.156.033.768-.767.965-2.158-.033-3.156l-1.706-1.707h2.413c1.411 0 2.255-1.123 2.255-2.208 0-1.198-.992-2.21-2.167-2.21h-2.347l1.537-1.69c1.035-1.079.808-2.412.048-3.171-.839-.838-2.335-.821-3.142.019l-1.721 1.793v-2.486c0-1.411-1.123-2.255-2.208-2.255-1.281 0-2.241 1.081-2.209 2.227l-.008 2.514-1.698-1.779c-.87-.869-2.327-.861-3.157-.033-.767.767-.964 2.158.034 3.156l1.779 1.778-2.514-.072h-.002c-1.233 0-2.225 1.012-2.225 2.209 0 1.085.843 2.208 2.255 2.208h2.485zm5.26-5.208c1.656 0 3 1.344 3 3s-1.344 3-3 3-3-1.344-3-3 1.344-3 3-3z"/></svg> 
+                <span class=" text-2xl lg:pl-2"> /> </span>
                 <span class="lg:pl-6"> Macon Code </span></a>
               <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -121,9 +56,6 @@
             <nav :class="{'flex': open, 'hidden': !open}" class=" z-10  flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
               <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Donate</a>
               <a class="px-4 py-2 mt-2 text-lg font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#about">Volunteer</a>
-         
-              
-           
             </nav>
           </div>
         </div>
@@ -131,12 +63,7 @@
       </nav>  
 
         
-      <div id="hero-overlay-img" class=" hero max-w-full   bg-cover  lg:bg-center bg-[url('https://picsum.photos/id/82/1920/2440')]  ">
-      
-     
-
-        <!-- https://picsum.photos/id/82/1920/2440' https://picsum.photos/647/486 -->
-
+      <div id="hero-overlay-img" class=" hero max-w-full   bg-cover  lg:bg-center bg-[url('https://picsum.photos/id/82/1920/2440')]">
         <div class="hero-overlay bg-pink-700 bg-opacity-60"></div>
         <div class="mx-auto  pt-32 my-28 pb-6    lg:ml-16 md:ml-10  lg:max-w-7xl ">
           <header class=" flex flex-col  pb-36"
@@ -144,10 +71,7 @@
             data-aos-duration="1000"
             data-aos-delay="100">
            
-            <h1
-            class="max-w-xl uppercase mb-4 text-xl leading-tight md:text-4xl md:leading-tight lg:text-6xl lg:leading-tight font-bold text-white">
-            Help us design for Macon!
-            </h1>
+            <h1 class="max-w-xl uppercase mb-4 text-xl leading-tight md:text-4xl md:leading-tight lg:text-6xl lg:leading-tight font-bold text-white">Help us design for Macon!</h1>
             <p class="text-xl text-white font-normal leading-relaxed lg:leading-normal lg:text-2xl tracking-wide mt-6 max-w-4xl">
               We are Macon Code, a non-profit organization working on solutions for community problems through the thoughtful use of technology. We beleive in the possibilities of our community, and we strive to develop resources that make Macon better for everyone.
             </p>
@@ -156,23 +80,14 @@
             </a>
           </header>
         </div>
-        
-   
       </div>
+
+      <main class="">
+      
       </main>
 
       <section class="py-28 bg-gray-50">
         <div class="container px-4 mx-auto">
-            <!-- <div class="max-w-xl lg:max-w-2xl mx-auto mb-12 text-center">
-                <h2
-                    class="mb-4 text-2xl leading-tight md:text-3xl md:leading-tight lg:text-6xl lg:leading-tight font-bold text-black uppercase">
-                    quo adipisci
-                </h2>
-                <p class="mb-9 text-lg lg:text-2xl leading-loose lg:leading-loose text-gray-500">
-                    Rerum necessitatibus et nisi nisi blanditiis perferendis molestias qui. Necessitatibus et id
-                    sint voluptates ratione et praesentium. Qui et in ea quae voluptatum sunt.
-                </p>
-            </div> -->
             <div class="flex flex-wrap items-center -mx-4 -mb-6 lg:mb-0" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="100">
                 <div class="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
@@ -247,16 +162,13 @@
       <div class="max-w-xl lg:max-w-5xl mx-auto text-center">
         <h2
           class="mb-4 text-2xl leading-tight md:text-3xl md:leading-tight lg:text-6xl lg:leading-tight font-bold text-black uppercase">Current projects</h2>
-      
-     <div class="mx-auto  w-20 mb-4  border-b-8 border-[#df1683] "></div> 
+        <div class="mx-auto  w-20 mb-4  border-b-8 border-[#df1683] "></div> 
         <p class="mb-9 text-lg lg:text-2xl leading-loose lg:leading-loose text-gray-500">
           These projects have are in development or have been recently pithed to Macon Code. If you are interested in any of these projects and would like to contribute, contact us!
-      </p>
+        </p>
     </div> 
   <div class="relative py-24 lg:py-32 bg-base-200  overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-
-    <button type="button" class="flex absolute top-0 left-0 justify-center items-center  px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-      
+    <button type="button" class="flex absolute top-0 left-0 justify-center items-center  px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>   
       <span class="inline-flex justify-center items-center w-8 h-10 rounded-full sm:w-20 sm:h-20 bg-stone-500/40 dark:bg-gray-800/30 group-hover:bg-stone-600/50   group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
         <svg class="w-8 h-8 text-white sm:w-18 sm:h-20 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
           <span class="hidden">Previous</span>
@@ -265,7 +177,6 @@
 
 
   <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center   px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-
     <span class="inline-flex justify-center items-center w-8 h-10 rounded-full  sm:w-20 sm:h-20 bg-stone-500/40 dark:bg-gray-800/30 group-hover:bg-stone-600/50  group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
       <svg class="w-8 h-8 text-white  sm:w-18 sm:h-20 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 
