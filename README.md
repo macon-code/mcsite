@@ -71,6 +71,10 @@ $ python manage.py runserver
 
 When contributing, only include the project files - do not include the virtual environment. 
 
+## Deployment
+Deployment is handled by members of Macon Code. We are running on Google Cloud. If you are comfortable with server side development, or want to learn more get involved! 
+
+
 ## License
 
 All rights reserved. 
