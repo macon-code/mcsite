@@ -38,6 +38,20 @@ When finished, either close your terminal or deactivate the environment by runni
 $ deactivate
 ```
 
+
+### Database Migrations 
+
+Django's migrations system allows for changes in the database schema to reflect alterations in the models. It ensures the database remains synchronized with the model definitions.
+
+#### Creating Migrations
+
+After modifying any model, generate the corresponding migration with:
+
+```bash
+$ python manage.py makemigrations
+
+
+
 ### Development server
 
 Within your virtual environment, install dependencies by running:
