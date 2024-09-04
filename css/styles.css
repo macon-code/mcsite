@@ -10846,6 +10846,11 @@ header.masthead {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
+header.masthead-projects {
+  min-height: 20vh;
+  min-height: 375px;
+  background-position: center;
+}
 header.masthead:before {
   content: "";
   position: absolute;
