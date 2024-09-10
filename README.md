@@ -21,21 +21,29 @@ The website for Macon Code, developed by volunteers of Macon Code to share infor
 It is recommended to use a virtual environment while developing. Using the latest version of Python, you can create a virtual environment by running:
 
 ```
-$ python -m venv .env
+python -m venv .env
 ```
 
 Activate the environment by running:
 
+
+(bash): 
 ```
-(bash)            $ source .env/bin/activate
-(command prompt)  > .env/bin/activate.bat
-(powershell)      > .env/bin/activate.ps1
+source .env/bin/activate
+```
+(command prompt):
+  ```
+  .env/bin/activate.bat
+  ```
+(powershell):
+```
+.env/bin/activate.ps1
 ```
 
 When finished, either close your terminal or deactivate the environment by running:
 
 ```
-$ deactivate
+deactivate
 ```
 
 ### Development server
@@ -43,13 +51,13 @@ $ deactivate
 Within your virtual environment, install dependencies by running:
 		
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Start the development server by running:
 
 ```
-$ python manage.py runserver
+python manage.py runserver
 ```
 
 
@@ -57,15 +65,15 @@ $ python manage.py runserver
 1. Fork the repository
 2. Create a new branch: 
    ```
-   $ git checkout -b feature_name
+   git checkout -b feature_name
    ```
 3. Make your changes and commit them: 
    ```
-   $ git commit -m "Description of changes"
+   git commit -m "Description of changes"
    ```
 4. Push the changes to your branch: 
    ```
-   $ git push -u origin HEAD
+   git push -u origin HEAD
    ```
 5. Submit a pull request
 
